@@ -1,0 +1,31 @@
+@use "./variables" as v;
+
+.work {
+  background-color: v.$pri__light-red-work;
+  background-image: url(/images/icon-work.svg);
+}
+
+.play {
+  background-color: v.$pri__soft-blue-play;
+  background-image: url(/images/icon-play.svg);
+}
+
+.study {
+  background-color: v.$pri__light-red-study;
+  background-image: url(/images/icon-study.svg);
+}
+
+.exercise {
+  background-color: v.$pri__lime-green-exercise;
+  background-image: url(/images/icon-exercise.svg);
+}
+
+.social {
+  background-color: v.$pri__violet-social;
+  background-image: url(/images/icon-social.svg);
+}
+
+.self-care {
+  background-color: v.$pri__soft-orange-self-care;
+  background-image: url(/images/icon-self-care.svg);
+}

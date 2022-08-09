@@ -1,0 +1,94 @@
+@use "../abstracts/breakpoints" as b;
+@use "../abstracts/functions" as f;
+@use "../globals/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.card {
+  padding-top: 2.5rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: top -2% right 5%;
+  position: relative;
+  margin-bottom: 1.5rem;
+  min-height: f.rem(157);
+
+  @include b.mq-up(medium) {
+    margin-bottom: 0;
+  }
+
+  &__inner {
+    background: v.$neut__dk-blue;
+    border-radius: 1rem 1rem 0.3rem 0.3rem;
+    padding: 2rem 2rem 0;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    &:hover {
+      background: hsl(237, 32%, 40%);
+      cursor: pointer;
+    }
+  }
+
+  &__title {
+    @include m.flex(row, center, space-between);
+    margin-bottom: 1.5rem;
+
+    @include b.mq-up(medium) {
+      @include m.flex(row, flex-start, space-between);
+      margin-bottom: 1.5rem;
+    }
+
+    p:last-child {
+      font-size: 1rem;
+      color: hsl(236, 27%, 69%);
+
+      @include b.mq-up(medium) {
+        font-size: 1.5rem;
+      }
+
+      &:hover {
+        color: white;
+      }
+    }
+
+    @include b.mq-up(medium) {
+      & h5 {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  &__report {
+    @include m.flex(row, center, space-between);
+
+    @include b.mq-up(medium) {
+      @include m.flex-al(column, flex-start);
+    }
+
+    .current {
+      font-size: 1.7rem;
+      font-weight: 300;
+      color: hsl(0, 0%, 96%);
+
+      @include b.mq-up(medium) {
+        font-size: 3.5rem;
+        margin-bottom: 0.7rem;
+      }
+    }
+
+    .previous {
+      font-size: 0.85rem;
+      color: hsl(236, 27%, 69%);
+
+      @include b.mq-up(medium) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

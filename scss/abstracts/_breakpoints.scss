@@ -1,0 +1,12 @@
+@use "./functions" as f;
+
+$breakpoints-up: (
+  "medium": f.em(600),
+  "large": f.em(900),
+);
+
+@mixin mq-up($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}

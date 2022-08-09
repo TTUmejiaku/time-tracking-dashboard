@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dist/main.css" />
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="container grid">
+      <section class="report">
+        <div class="report__user">
+          <img src="./images/image-jeremy.png" alt="" />
+          <div class="report__profile">
+            <p>Report for</p>
+            <p>Jeremy Robson</p>
+          </div>
+        </div>
+        <div class="report__timeframe">
+          <p>Daily</p>
+          <p>Weekly</p>
+          <p>Monthly</p>
+        </div>
+      </section>
+
+      <!-- individual card start -->
+      <article class="card work">
+        <div class="card__inner">
+          <div class="card__title">
+            <h5>Work</h5>
+            <p>&#8226;&#8226;&#8226;</p>
+          </div>
+          <div id="work" class="card__report">
+            <p class="current"></p>
+            <p class="previous"></p>
+          </div>
+        </div>
+      </article>
+
+      <!-- individual card start -->
+      <article class="card play">
+        <div class="card__inner">
+          <div class="card__title">
+            <h5>Play</h5>
+            <p>&#8226;&#8226;&#8226;</p>
+          </div>
+          <div id="play" class="card__report">
+            <p class="current"></p>
+            <p class="previous"></p>
+          </div>
+        </div>
+      </article>
+
+      <!-- individual card start -->
+      <article class="card study">
+        <div class="card__inner">
+          <div class="card__title">
+            <h5>Study</h5>
+            <p>&#8226;&#8226;&#8226;</p>
+          </div>
+          <div id="study" class="card__report">
+            <p class="current"></p>
+            <p class="previous"></p>
+          </div>
+        </div>
+      </article>
+
+      <!-- individual card start -->
+      <article class="card exercise">
+        <div class="card__inner">
+          <div class="card__title">
+            <h5>Exercise</h5>
+            <p>&#8226;&#8226;&#8226;</p>
+          </div>
+          <div id="exercise" class="card__report">
+            <p class="current"></p>
+            <p class="previous"></p>
+          </div>
+        </div>
+      </article>
+
+      <!-- individual card start -->
+      <article class="card social">
+        <div class="card__inner">
+          <div class="card__title">
+            <h5>Social</h5>
+            <p>&#8226;&#8226;&#8226;</p>
+          </div>
+          <div id="social" class="card__report">
+            <p class="current"></p>
+            <p class="previous"></p>
+          </div>
+        </div>
+      </article>
+
+      <!-- individual card start -->
+      <article class="card self-care">
+        <div class="card__inner">
+          <div class="card__title">
+            <h5>Self Care</h5>
+            <p>&#8226;&#8226;&#8226;</p>
+          </div>
+          <div id="self-care" class="card__report">
+            <p class="current"></p>
+            <p class="previous"></p>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- footer section -->
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">TTUmejiaku</a>.
+    </footer>
+  </body>
+</html>

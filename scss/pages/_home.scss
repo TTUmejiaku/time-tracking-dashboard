@@ -1,0 +1,115 @@
+@use "../abstracts/breakpoints" as b;
+@use "../abstracts/functions" as f;
+@use "../globals/variables" as v;
+@use "../abstracts/mixins" as m;
+
+body {
+  @include b.mq-up(medium) {
+    @include m.flex(column, center, center);
+  }
+}
+
+.container {
+  width: 90%;
+  min-width: f.rem(375);
+  color: hsl(0, 0%, 96%);
+  margin: 4rem auto;
+  padding-inline: 2rem;
+
+  @include b.mq-up(medium) {
+    max-width: f.rem(1300);
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include b.mq-up(medium) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+.report {
+  background-color: v.$neut__dk-blue;
+  border-radius: 0 0 0.8rem 0.8rem;
+  margin-bottom: 2rem;
+
+  @include b.mq-up(medium) {
+    grid-row: span 2;
+    margin-bottom: 0;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+    background-color: v.$pri__blue;
+    border-radius: 0.8rem;
+
+    @include b.mq-up(medium) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-bottom: f.rem(66);
+    }
+
+    img {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      border: 2px solid white;
+
+      @include b.mq-up(medium) {
+        width: 6rem;
+        height: 6rem;
+        border: 3px solid white;
+        margin-bottom: 2rem;
+      }
+    }
+
+    .report__profile {
+      p:first-child {
+        font-size: 0.8rem;
+        color: hsl(236, 26%, 77%);
+        font-weight: 500;
+        margin-bottom: 0.4rem;
+
+        @include b.mq-up(medium) {
+          font-size: 1rem;
+        }
+      }
+      p:last-child {
+        font-size: 1.3rem;
+        font-weight: 300;
+        color: hsl(0, 0%, 96%);
+
+        @include b.mq-up(medium) {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+
+  &__timeframe {
+    @include m.flex(row, center, space-between);
+    padding: 2rem;
+    color: v.$neut__des-blue;
+
+    @include b.mq-up(medium) {
+      @include m.flex-al(column, flex-start);
+
+      & p {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+      }
+    }
+
+    & p:hover {
+      color: white;
+      cursor: pointer;
+    }
+  }
+}

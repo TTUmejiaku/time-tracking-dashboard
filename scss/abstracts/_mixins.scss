@@ -1,0 +1,18 @@
+@mixin flex($direction, $al, $js) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $js;
+  align-items: $al;
+}
+
+@mixin flex-al($direction, $al) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $al;
+}
+
+@mixin flex-js($direction, $js) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $js;
+}
